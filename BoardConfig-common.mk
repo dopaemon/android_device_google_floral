@@ -17,29 +17,31 @@
 include build/make/target/board/BoardConfigMainlineCommon.mk
 include build/make/target/board/BoardConfigPixelCommon.mk
 
+DEVICE_PATH := device/google/floral
+
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 TARGET_BOARD_PLATFORM := msmnile
-TARGET_BOARD_INFO_FILE := device/google/coral/board-info.txt
+TARGET_BOARD_INFO_FILE := device/google/floral/board-info.txt
 USES_DEVICE_GOOGLE_CORAL := true
 ALLOW_MISSING_DEPENDENCIES=true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
 
+# Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a76
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-2a
+TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
-TARGET_BOARD_COMMON_PATH := device/google/coral/sm8150
+TARGET_BOARD_COMMON_PATH := device/google/floral/sm8150
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image.lz4
@@ -94,8 +96,8 @@ AB_OTA_PARTITIONS += \
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Partitions (listed in the file) to be wiped under recovery.
-TARGET_RECOVERY_WIPE := device/google/coral/recovery.wipe
-TARGET_RECOVERY_FSTAB := device/google/coral/fstab.hardware
+TARGET_RECOVERY_WIPE := device/google/floral/recovery.wipe
+TARGET_RECOVERY_FSTAB := device/google/floral/fstab.hardware
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_UI_LIB := \
     librecovery_ui_pixel \
@@ -131,9 +133,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_ROOT_EXTRA_SYMLINKS := /mnt/vendor/persist:/persist
 
-include device/google/coral/sepolicy/coral-sepolicy.mk
+include device/google/floral/sepolicy/coral-sepolicy.mk
 
-TARGET_FS_CONFIG_GEN := device/google/coral/config.fs
+TARGET_FS_CONFIG_GEN := device/google/floral/config.fs
 
 QCOM_BOARD_PLATFORMS += msmnile
 QC_PROP_ROOT := vendor/qcom/sm8150/proprietary
@@ -226,7 +228,7 @@ TARGET_USES_HWC2 := true
 
 # Adaptive charging
 PRODUCT_COPY_FILES += \
-    device/google/coral/conf/adaptivecharging.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/adaptivecharging.xml
+    device/google/floral/conf/adaptivecharging.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/adaptivecharging.xml
 
 # Display
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
@@ -235,12 +237,18 @@ TARGET_USES_DRM_PP := true
 TARGET_HAS_WIDE_COLOR_DISPLAY := true
 TARGET_HAS_HDR_DISPLAY := true
 
+# Security
+BOOT_SECURITY_PATCH := 2022-12-05
+PLATFORM_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
+PLATFORM_SECURITY_PATCH_TIMESTAMP := $(shell date -d 'TZ="GMT" $(PLATFORM_SECURITY_PATCH)' +%s)
+VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
+
 # Vendor Interface Manifest
-DEVICE_MANIFEST_FILE := device/google/coral/manifest.xml
-DEVICE_MATRIX_FILE := device/google/coral/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := device/google/floral/manifest.xml
+DEVICE_MATRIX_FILE := device/google/floral/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += hardware/st/nfc/aidl/nfc-service-default.xml
 # Intall device framework compatibility matrix to product partition
-DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE := device/google/coral/device_framework_matrix_product.xml
+DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE := device/google/floral/device_framework_matrix_product.xml
 
 # Needed for camera
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true

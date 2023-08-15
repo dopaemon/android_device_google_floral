@@ -16,9 +16,9 @@
 
 PRODUCT_HARDWARE := coral
 
-include device/google/coral/device-common.mk
+include device/google/floral/device-common.mk
 
-DEVICE_PACKAGE_OVERLAYS += device/google/coral/coral/overlay
+DEVICE_PACKAGE_OVERLAYS += device/google/floral/coral/overlay
 
 # Audio XMLs for coral
 PRODUCT_COPY_FILES += \
@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
 
 # Display config
 PRODUCT_COPY_FILES += \
-    device/google/coral/displayconfig/display_19260504575090817.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/display_19260504575090817.xml
+    device/google/floral/displayconfig/display_19260504575090817.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/display_19260504575090817.xml
 
 # Settings overlay packages for regulatory_info
 PRODUCT_PACKAGES += \

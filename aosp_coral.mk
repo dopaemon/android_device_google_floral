@@ -41,7 +41,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
-$(call inherit-product, device/google/coral/device-coral.mk)
+$(call inherit-product, device/google/floral/device-coral.mk)
 $(call inherit-product-if-exists, vendor/google_devices/coral/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/coral/prebuilts/device-vendor-coral.mk)
 

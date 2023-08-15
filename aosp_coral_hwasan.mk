@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/google/coral/aosp_coral.mk)
+$(call inherit-product, device/google/floral/aosp_coral.mk)
 PRODUCT_NAME := aosp_coral_hwasan
 
 # Add "hwaddress" as a global sanitizer if it's missing.

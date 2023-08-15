@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/google/coral
+LOCAL_PATH := device/google/floral
 
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
@@ -23,7 +23,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/camera \
     hardware/google/interfaces \
     hardware/google/pixel \
-    device/google/coral \
+    device/google/floral \
     hardware/qcom/sm8150/display \
     hardware/qcom/sm8150/data/ipacfg-mgr \
     hardware/qcom/sm8150/gps \
@@ -41,8 +41,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     masterclear.allow_retain_esim_profiles_after_fdr=true
 
 PRODUCT_COPY_FILES += \
-    device/google/coral/default-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions.xml \
-    device/google/coral/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
+    device/google/floral/default-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions.xml \
+    device/google/floral/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
@@ -409,13 +409,13 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0-service.st
 
 PRODUCT_COPY_FILES += \
-    device/google/coral/nfc/com.google.hardware.pixel.japan.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_G020N/com.google.hardware.pixel.japan.xml \
-    device/google/coral/nfc/com.google.hardware.pixel.japan.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_G020Q/com.google.hardware.pixel.japan.xml
+    device/google/floral/nfc/com.google.hardware.pixel.japan.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_G020N/com.google.hardware.pixel.japan.xml \
+    device/google/floral/nfc/com.google.hardware.pixel.japan.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_G020Q/com.google.hardware.pixel.japan.xml
 
 PRODUCT_COPY_FILES += \
-    device/google/coral/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
-    device/google/coral/nfc/libese-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libese-hal-st.conf \
-    device/google/coral/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
+    device/google/floral/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
+    device/google/floral/nfc/libese-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libese-hal-st.conf \
+    device/google/floral/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
 
 # USB HAL
 PRODUCT_PACKAGES += \
@@ -830,65 +830,65 @@ PRODUCT_COPY_FILES += \
 
 # Audio ACDB data
 PRODUCT_COPY_FILES += \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Bluetooth_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/General_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Global_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Handset_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Hdmi_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Headset_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Speaker_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Codec_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Bluetooth_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/General_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Global_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Handset_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Hdmi_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Headset_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Speaker_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Codec_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Bluetooth_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/General_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Global_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Handset_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Hdmi_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Headset_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Speaker_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Codec_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Bluetooth_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/General_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Global_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Handset_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Hdmi_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Headset_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Speaker_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Codec_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Bluetooth_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/General_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Global_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Handset_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Hdmi_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Headset_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Speaker_cal.acdb \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Codec_cal.acdb \
-    device/google/coral/audio/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Bluetooth_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/General_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Global_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Handset_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Hdmi_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Headset_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Speaker_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/Codec_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Bluetooth_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/General_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Global_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Handset_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Hdmi_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Headset_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Speaker_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/Codec_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Bluetooth_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/General_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Global_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Handset_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Hdmi_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Headset_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Speaker_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/Codec_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Bluetooth_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/General_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Global_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Handset_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Hdmi_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Headset_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Speaker_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Codec_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Bluetooth_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/General_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Global_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Handset_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Hdmi_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Headset_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Speaker_cal.acdb \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Codec_cal.acdb \
+    device/google/floral/audio/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb
 
 
 # Audio ACDB workspace files for QACT
 ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_COPY_FILES += \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/workspaceFile.qwsp \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/workspaceFile.qwsp \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/workspaceFile.qwsp \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/workspaceFile.qwsp \
-    device/google/coral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/workspaceFile.qwsp
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-jaws-snd-card/workspaceFile.qwsp \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-coral-snd-card/workspaceFile.qwsp \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-c2proto-snd-card/workspaceFile.qwsp \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/workspaceFile.qwsp \
+    device/google/floral/audio/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/workspaceFile.qwsp
 endif
 
 # Audio speaker tunning config data
 PRODUCT_COPY_FILES += \
-    device/google/coral/audio/data/crus_sp_config_coral_rx.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/crus_sp_config_coral_rx.bin \
-    device/google/coral/audio/data/crus_sp_config_coral_tx.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/crus_sp_config_coral_tx.bin \
-    device/google/coral/audio/data/crus_sp_config_flame_rx.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/crus_sp_config_flame_rx.bin \
-    device/google/coral/audio/data/crus_sp_config_flame_tx.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/crus_sp_config_flame_tx.bin
+    device/google/floral/audio/data/crus_sp_config_coral_rx.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/crus_sp_config_coral_rx.bin \
+    device/google/floral/audio/data/crus_sp_config_coral_tx.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/crus_sp_config_coral_tx.bin \
+    device/google/floral/audio/data/crus_sp_config_flame_rx.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/crus_sp_config_flame_rx.bin \
+    device/google/floral/audio/data/crus_sp_config_flame_tx.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/crus_sp_config_flame_tx.bin
 
 # Audio audiozoom config data
 PRODUCT_COPY_FILES += \
@@ -1080,7 +1080,7 @@ PRODUCT_COPY_FILES += \
 # Permissions
 # NOTE: Used to deal with permission issues caused by Gapps updates
 PRODUCT_COPY_FILES += \
-    device/google/coral/permissions/pixel_permissions_product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/pixel_permissions_product.xml
+    device/google/floral/permissions/pixel_permissions_product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/pixel_permissions_product.xml
 
 # powerstats HAL
 PRODUCT_PACKAGES += \

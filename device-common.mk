@@ -20,7 +20,7 @@ PRODUCT_PLATFORM := sm8150
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-include device/google/coral/device.mk
+include device/google/floral/device.mk
 
 # Set Vendor SPL to match platform
 VENDOR_SECURITY_PATCH = 2022-10-05
@@ -76,7 +76,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Modem logging file
 PRODUCT_COPY_FILES += \
-    device/google/coral/init.logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_PLATFORM).logging.rc
+    device/google/floral/init.logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_PLATFORM).logging.rc
 
 # Pixelstats broken mic detection
 PRODUCT_PROPERTY_OVERRIDES += vendor.audio.mic_break=true

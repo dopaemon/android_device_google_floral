@@ -16,21 +16,21 @@
 
 PRODUCT_HARDWARE := flame
 
-include device/google/coral/device-common.mk
+include device/google/floral/device-common.mk
 
-DEVICE_PACKAGE_OVERLAYS += device/google/coral/flame/overlay
+DEVICE_PACKAGE_OVERLAYS += device/google/floral/flame/overlay
 
 # Audio XMLs for flame
 PRODUCT_COPY_FILES += \
-    device/google/coral/audio/audio_policy_volumes_flame.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
+    device/google/floral/audio/audio_policy_volumes_flame.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
 
 # Bluetooth Tx power caps for flame
 PRODUCT_COPY_FILES += \
-    device/google/coral/bluetooth_power_limits_flame.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv
+    device/google/floral/bluetooth_power_limits_flame.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv
 
 # Display config
 PRODUCT_COPY_FILES += \
-    device/google/coral/displayconfig/display_19261132550654593.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/display_19261132550654593.xml
+    device/google/floral/displayconfig/display_19261132550654593.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/display_19261132550654593.xml
 
 PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.height_ratio=1.2
 

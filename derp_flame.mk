@@ -3,7 +3,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := false
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/google/coral/aosp_flame.mk)
+$(call inherit-product, device/google/floral/aosp_flame.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
