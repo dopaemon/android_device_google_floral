@@ -50,8 +50,18 @@ TARGET_BOARD_COMMON_PATH := device/google/floral/sm8150
 # Kernel
 ifeq ($(wildcard prebuilts/tools-lineage),)
     BUILD_TOOLS := tools-superior
-else ifeq ($(wildcard prebuilts/tools-superior),)
+else
     BUILD_TOOLS := tools-lineage
+endif
+
+ifeq ($(wildcard prebuilts/tools-superior),)
+    BUILD_TOOLS := tools-lineage
+else
+    BUILD_TOOLS := tools-superior
+endif
+
+ifeq ($(wildcard prebuilts/tools-custom),)
+    BUILD_TOOLS := misc
 else
     BUILD_TOOLS := tools-custom
 endif

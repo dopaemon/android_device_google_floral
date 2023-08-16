@@ -23,7 +23,7 @@ fi
 
 # Vendor Flame
 VENDOR_FLAME="vendor/google/flame"
-if [ ! -d "$VENDOR_CORAL" ]; then
+if [ ! -d "$VENDOR_FLAME" ]; then
   git clone --depth=1 https://github.com/LucasBlackLu/proprietary_vendor_google_flame.git ${VENDOR_FLAME}
 else
   echo "No Need: ${VENDOR_FLAME} is already available there."
@@ -53,4 +53,20 @@ if [ -d "${MEDIA}" ]; then
   git clone -b lineage-20.0 --single-branch https://github.com/LineageOS/android_hardware_qcom_sm8150_media.git "${MEDIA}"
 else
   git clone -b lineage-20.0 --single-branch https://github.com/LineageOS/android_hardware_qcom_sm8150_media.git "${MEDIA}"
+fi
+
+# Hardware Pixel
+HARDWARE_PIXEL="hardware/google/pixel"
+if [ ! -d "$HARDWARE_PIXEL" ]; then
+  git clone --depth=1 -b lineage-20.0 --single-branch https://github.com/LineageOS/android_hardware_google_pixel.git ${HARDWARE_PIXEL}
+else
+  echo "No Need: ${HARDWARE_PIXEL} is already available there."
+fi
+
+# Hardware Pixel Sepolicy
+HARDWARE_PIXEL_SEPOLICY="hardware/google/pixel-sepolicy"
+if [ ! -d "$HARDWARE_PIXEL_SEPOLICY" ]; then
+  git clone --depth=1 -b lineage-20.0 --single-branch https://github.com/LineageOS/android_hardware_google_pixel-sepolicy.git ${HARDWARE_PIXEL_SEPOLICY}
+else
+  echo "No Need: ${HARDWARE_PIXEL_SEPOLICY} is already available there."
 fi
