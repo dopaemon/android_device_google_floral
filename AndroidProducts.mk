@@ -31,6 +31,8 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/superior_coral.mk \
     $(LOCAL_DIR)/p404_flame.mk \
     $(LOCAL_DIR)/p404_coral.mk \
+    $(LOCAL_DIR)/cherish_flame.mk \
+    $(LOCAL_DIR)/cherish_coral.mk \
     $(LOCAL_DIR)/aosp_coral_hwasan.mk \
     $(LOCAL_DIR)/aosp_flame_hwasan.mk
 
@@ -55,4 +57,7 @@ COMMON_LUNCH_CHOICES := \
     p404_coral-userdebug \
     p404_flame-eng \
     p404_coral-eng \
-
+    cherish_flame-userdebug \
+    cherish_coral-userdebug \
+    cherish_flame-eng \
+    cherish_coral-eng
