@@ -27,6 +27,8 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/derp_coral.mk \
     $(LOCAL_DIR)/spark_flame.mk \
     $(LOCAL_DIR)/spark_coral.mk \
+    $(LOCAL_DIR)/superior_flame.mk \
+    $(LOCAL_DIR)/superior_coral.mk \
     $(LOCAL_DIR)/aosp_coral_hwasan.mk \
     $(LOCAL_DIR)/aosp_flame_hwasan.mk
 
@@ -42,4 +44,8 @@ COMMON_LUNCH_CHOICES := \
     spark_flame-userdebug \
     spark_coral-userdebug \
     spark_flame-eng \
-    spark_coral-eng
+    spark_coral-eng \
+    superior_flame-userdebug \
+    superior_coral-userdebug \
+    superior_flame-eng \
+    superior_coral-eng
