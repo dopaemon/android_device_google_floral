@@ -23,6 +23,8 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_coral.mk \
     $(LOCAL_DIR)/aosp_flame.mk \
+    $(LOCAL_DIR)/lineage_coral.mk \
+    $(LOCAL_DIR)/lineage_flame.mk \
     $(LOCAL_DIR)/derp_flame.mk \
     $(LOCAL_DIR)/derp_coral.mk \
     $(LOCAL_DIR)/spark_flame.mk \
@@ -41,6 +43,10 @@ COMMON_LUNCH_CHOICES := \
     aosp_flame-userdebug \
     aosp_coral-eng \
     aosp_flame-eng \
+    lineage_coral-userdebug \
+    lineage_flame-userdebug \
+    lineage_coral-eng \
+    lineage_flame-eng \
     derp_flame-userdebug \
     derp_coral-userdebug \
     derp_flame-eng \
