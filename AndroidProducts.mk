@@ -25,6 +25,8 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_flame.mk \
     $(LOCAL_DIR)/lineage_coral.mk \
     $(LOCAL_DIR)/lineage_flame.mk \
+    $(LOCAL_DIR)/syberia_coral.mk \
+    $(LOCAL_DIR)/syberia_flame.mk \
     $(LOCAL_DIR)/derp_flame.mk \
     $(LOCAL_DIR)/derp_coral.mk \
     $(LOCAL_DIR)/droidx_flame.mk \
@@ -49,6 +51,10 @@ COMMON_LUNCH_CHOICES := \
     lineage_flame-userdebug \
     lineage_coral-eng \
     lineage_flame-eng \
+    syberia_coral-userdebug \
+    syberia_flame-userdebug \
+    syberia_coral-eng \
+    syberia_flame-eng \
     derp_flame-userdebug \
     derp_coral-userdebug \
     derp_flame-eng \
