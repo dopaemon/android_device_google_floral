@@ -3,3 +3,6 @@ ro.spark.device.name=Google Pixel 4
 ro.spark.group.url=https://t.me/totoronk
 ro.spark.maintainer=Cục Cứt Dễ Dãi
 ro.spark.maintainer.username=kernelpanix
+
+# DroidX-UI Unofficial
+ro.droidx.maintainer=Cục Cứt Dễ Dãi

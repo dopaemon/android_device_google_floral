@@ -27,6 +27,8 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_flame.mk \
     $(LOCAL_DIR)/derp_flame.mk \
     $(LOCAL_DIR)/derp_coral.mk \
+    $(LOCAL_DIR)/droidx_flame.mk \
+    $(LOCAL_DIR)/droidx_coral.mk \
     $(LOCAL_DIR)/spark_flame.mk \
     $(LOCAL_DIR)/spark_coral.mk \
     $(LOCAL_DIR)/superior_flame.mk \
@@ -51,6 +53,10 @@ COMMON_LUNCH_CHOICES := \
     derp_coral-userdebug \
     derp_flame-eng \
     derp_coral-eng \
+    droidx_flame-userdebug \
+    droidx_coral-userdebug \
+    droidx_flame-eng \
+    droidx_coral-eng \
     spark_flame-userdebug \
     spark_coral-userdebug \
     spark_flame-eng \
