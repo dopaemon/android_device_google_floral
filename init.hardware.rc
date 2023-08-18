@@ -492,6 +492,31 @@ on boot
     # WLAN debug access
     chown system system /d/icnss/stats
 
+    # Force Fast Charge & Charge Cable Support
+    write /sys/kernel/fast_charge/force_fast_charge 1
+    write /sys/class/power_supply/battery/system_temp_level 1
+    write /sys/kernel/fast_charge/failsafe 1
+    write /sys/class/power_supply/battery/allow_hvdcp3 1
+    write /sys/class/power_supply/usb/pd_allowed 1
+    write /sys/class/power_supply/battery/subsystem/usb/pd_allowed 1
+    write /sys/class/power_supply/battery/input_current_limited 0
+    write /sys/class/power_supply/battery/input_current_settled 1
+    write /sys/class/qcom-battery/restricted_charging 0
+    write /sys/class/power_supply/bms/temp_cool 150
+    write /sys/class/power_supply/bms/temp_hot 450
+    write /sys/class/power_supply/bms/temp_warm 450
+    write /sys/class/power_supply/usb/current_max 3100000
+    write /sys/class/power_supply/usb/hw_current_max 3100000
+    write /sys/class/power_supply/usb/pd_current_max 3100000
+    write /sys/class/power_supply/usb/ctm_current_max 3100000
+    write /sys/class/power_supply/usb/sdp_current_max 3100000
+    write /sys/class/power_supply/main/current_max 3100000
+    write /sys/class/power_supply/main/constant_charge_current_max 3100000
+    write /sys/class/power_supply/battery/current_max 3100000
+    write /sys/class/power_supply/battery/constant_charge_current_max 3100000
+    write /sys/class/qcom-battery/restricted_current 3100000
+    write /sys/class/power_supply/pc_port/current_max 3100000
+
 service init-radio-sh /vendor/bin/init.radio.sh
     class late_start
     user radio
